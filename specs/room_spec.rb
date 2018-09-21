@@ -47,6 +47,14 @@ class RoomTest < MiniTest::Test
     @room2.empty()
     assert_equal(0, @room2.guests.length)
   end
+  
+def test_space_in_room
+  @room2.add_customer(@guest1)
+  @room2.add_customer(@guest2)
+  @room2.space_in_room(@guest3)
+  assert_equal(3, @room2.guests.length)
+end
+
 
 
 
