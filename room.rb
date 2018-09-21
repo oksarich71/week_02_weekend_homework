@@ -1,19 +1,29 @@
 class Room
 
   attr_reader :name
-  attr_accessor :capacity, :people
+  attr_accessor :capacity, :guests
 
 
-  def initialize(name, capacity, people = [])
+  def initialize(name, capacity)
     @name = name
     @capacity = capacity
-    @people = []
+    @guests = []
   end
 
-  def add_customer(customer, room)
-    customer << room
+
+
+
+    # def empty()
+    #   @passengers.clear
+    # end
+
+  def add_customer(guest)
+    @guests << guest
   end
 
+  def remove_customer(guest)
+    @guests.delete(guest)
+  end
 
 #   group = @group1.length
 # if @group1.length <= 5
