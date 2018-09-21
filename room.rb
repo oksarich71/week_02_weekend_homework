@@ -11,12 +11,6 @@ class Room
   end
 
 
-
-
-    # def empty()
-    #   @passengers.clear
-    # end
-
   def add_customer(guest)
     @guests << guest
   end
@@ -24,6 +18,11 @@ class Room
   def remove_customer(guest)
     @guests.delete(guest)
   end
+
+  def empty()
+    @guests.clear
+  end
+
 
 #   group = @group1.length
 # if @group1.length <= 5
