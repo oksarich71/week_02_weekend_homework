@@ -32,6 +32,8 @@ class KaraokeTest < MiniTest::Test
     assert_equal(206, @karaoke.till)
   end
 
+  
+
   # def test_guest_buys_ticket_karaoke_takes_money
   #      @.drink_bought(@beer)
   #      @customer1.buy_drink(@beer)

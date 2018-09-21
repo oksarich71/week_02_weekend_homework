@@ -13,7 +13,6 @@ class Karaoke
     @till += price
   end
 
-
-
+  
 
 end #class end

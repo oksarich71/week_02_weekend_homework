@@ -9,5 +9,12 @@ class Guest
     @money = money
   end
 
+  def remove_money(price)
+    @money -= price
+  end
+
+
+
+
 
 end #class end
