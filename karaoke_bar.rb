@@ -6,8 +6,14 @@ class Karaoke
 
   def initialize(name)
     @name = name
-    @till = 0
+    @till = 200
   end
+
+  def sell_ticket(price)
+    @till += price
+  end
+
+
 
 
 end #class end
