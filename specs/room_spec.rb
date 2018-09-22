@@ -7,12 +7,12 @@ require_relative("../guest.rb")
 class RoomTest < MiniTest::Test
 
   def setup
-    @room1 = Room.new("Green Room", 10, 5, "Abba")
-    @room2 = Room.new("Red Room", 1, 7, "Madonna")
-    @room3 = Room.new("Blue Room", 20, 6, "Oasis")
-    @guest1 = Guest.new("Amy Harris", 100)
-    @guest2 = Guest.new("Adam Hay", 55)
-    @guest3 = Guest.new("Lilly Elkan", 30)
+    @room1 = Room.new("Green Room", 10, 5)
+    @room2 = Room.new("Red Room", 1, 7)
+    @room3 = Room.new("Blue Room", 20, 6)
+    @guest1 = Guest.new("Amy Harris", 100, "Like a prayer")
+    @guest2 = Guest.new("Adam Hay", 55, "Promises")
+    @guest3 = Guest.new("Lilly Elkan", 30, "Mamma Mia")
   end
 
   def test_room_has_name

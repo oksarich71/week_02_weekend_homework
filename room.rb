@@ -4,7 +4,7 @@ class Room
   attr_accessor :capacity, :guests, :price
 
 
-  def initialize(name, capacity, price, playlist)
+  def initialize(name, capacity, price)
     @name = name
     @capacity = capacity
     @price = price

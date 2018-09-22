@@ -12,9 +12,9 @@ class KaraokeTest < MiniTest::Test
     @room1 = Room.new("Green Room", 10, 5)
     @room2 = Room.new("Red Room", 5, 7)
     @room3 = Room.new("Blue Room", 20, 6)
-    @guest1 = Guest.new("Amy Harris", 100)
-    @guest2 = Guest.new("Adam Hay", 55)
-    @guest3 = Guest.new("Lilly Elkan", 30)
+    @guest1 = Guest.new("Amy Harris", 100, "Like a prayer")
+    @guest2 = Guest.new("Adam Hay", 55, "Promises")
+    @guest3 = Guest.new("Lilly Elkan", 30, "Mamma Mia")
 
   @karaoke = Karaoke.new("SingAlong", [@guest1, @guest2, @guest3])
   end
