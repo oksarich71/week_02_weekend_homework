@@ -8,6 +8,7 @@ class Karaoke
     @name = name
     @till = 200
     @guests = guests
+
   end
 
   def sell_ticket(price)
