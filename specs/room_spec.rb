@@ -8,7 +8,7 @@ class RoomTest < MiniTest::Test
 
   def setup
     @room1 = Room.new("Green Room", 10, 5)
-    @room2 = Room.new("Red Room", 5, 7)
+    @room2 = Room.new("Red Room", 1, 7)
     @room3 = Room.new("Blue Room", 20, 6)
     @guest1 = Guest.new("Amy Harris", 100)
     @guest2 = Guest.new("Adam Hay", 55)
@@ -47,12 +47,11 @@ class RoomTest < MiniTest::Test
     @room2.empty()
     assert_equal(0, @room2.guests.length)
   end
-  
+
 def test_space_in_room
   @room2.add_customer(@guest1)
   @room2.add_customer(@guest2)
-  @room2.space_in_room(@guest3)
-  assert_equal(3, @room2.guests.length)
+  assert_equal(1, @room2.guests.length)
 end
 
 

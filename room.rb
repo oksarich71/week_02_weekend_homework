@@ -13,7 +13,7 @@ class Room
 
 
   def add_customer(guest)
-    @guests << guest
+    @guests << guest if space_in_room?
   end
 
   def remove_customer(guest)
@@ -24,11 +24,11 @@ class Room
     @guests.clear
   end
 
-  def space_in_room(guest)
-    if @guests.length <= @capacity
-      add_customer(guest)
+  def space_in_room?
+    if @guests.length < @capacity
+      return true
     else
-      return "Sorry, the room is full"
+      return false
     end
   end
 
