@@ -16,7 +16,7 @@ class KaraokeTest < MiniTest::Test
     @guest2 = Guest.new("Adam Hay", 55)
     @guest3 = Guest.new("Lilly Elkan", 30)
 
-  @karaoke = Karaoke.new("SingAlong")
+  @karaoke = Karaoke.new("SingAlong", [@guest1, @guest2, @guest3])
   end
 
   def test_karaoke_has_name()
@@ -32,14 +32,12 @@ class KaraokeTest < MiniTest::Test
     assert_equal(206, @karaoke.till)
   end
 
-  
-
-  # def test_guest_buys_ticket_karaoke_takes_money
-  #      @.drink_bought(@beer)
-  #      @customer1.buy_drink(@beer)
-  #      assert_equal(4, @pub.till)
-  #      assert_equal(96, @customer1.wallet)
-     # end
+  def test_guest_buys_ticket_karaoke_takes_money
+       @karaoke.sell_ticket(@room1.price)
+       @guest1.remove_money(@room1.price)
+       assert_equal(205, @karaoke.till)
+       assert_equal(95, @guest1.money)
+     end
 
 
 
