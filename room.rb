@@ -1,7 +1,7 @@
 class Room
 
-  attr_reader :name, :playlist
-  attr_accessor :capacity, :guests, :price
+  attr_reader :name
+  attr_accessor :capacity, :guests, :price, :playlist
 
 
   def initialize(name, capacity, price)
@@ -9,7 +9,7 @@ class Room
     @capacity = capacity
     @price = price
     @guests = []
-    @playlist = playlist
+    @playlist = []
   end
 
 
@@ -33,10 +33,17 @@ class Room
     end
   end
 
+  def add_song_to_playlist(song)
+    @playlist << song
+  end
 
-#   group = @group1.length
-# if @group1.length <= 5
-#   @group1 << "Green Room"
-# elsif
+# def favourite_song_playing(guest)
+#   for song in @playlist
+#   if song == guest.favourite_song
+#     puts "Whoo!"
+#   end
+# end
+# end
+
 
 end #class end
